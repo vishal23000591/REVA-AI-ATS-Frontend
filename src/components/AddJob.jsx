@@ -11,7 +11,7 @@ export default function AddJob() {
     fd.append("title", title);
     fd.append("description", desc);
     fd.append("keywords", keywords);
-    const res = await fetch("http://localhost:8000/add_job/", {
+    const res = await fetch("https://reva-ai-ats-backend.onrender.com/add_job/", {
       method: "POST",
       body: fd,
     });

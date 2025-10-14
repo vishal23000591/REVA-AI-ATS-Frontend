@@ -13,7 +13,7 @@ export default function UploadResume() {
   const [resumeSummary, setResumeSummary] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:8000/list_jobs")
+    fetch("https://reva-ai-ats-backend.onrender.com/list_jobs")
       .then((r) => r.json())
       .then(setJobs)
       .catch((err) => console.error(err));
@@ -28,7 +28,7 @@ export default function UploadResume() {
     fd.append("job_id", jobId);
 
     try {
-      const res = await fetch("http://localhost:8000/upload_resume", {
+      const res = await fetch("https://reva-ai-ats-backend.onrender.com/upload_resume", {
         method: "POST",
         body: fd,
       });
