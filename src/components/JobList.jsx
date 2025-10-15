@@ -4,7 +4,7 @@ export default function JobList() {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    fetch("https://reva-ai-ats-backend.onrender.com/list_jobs/")
+    fetch("hhttps://reva-ai-ats-backend-1.onrender.com/list_jobs/")
       .then((r) => r.json())
       .then(setJobs);
   }, []);
